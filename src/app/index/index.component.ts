@@ -25,9 +25,8 @@ export class IndexComponent {
 
    }
    filterMovie(form:any){
-
     let fromDateObject = new Date(form.fromDate);
-    console.log(fromDateObject);
+    // console.log(fromDateObject);
     let toDateObject = new Date(form.toDate);
 
     this.filteredMovies = this.movies.filter(movie => {
