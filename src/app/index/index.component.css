@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 97vh;
+    background: rgb(34,91,195);
+background: linear-gradient(90deg, rgba(34,91,195,1) 16%, rgba(45,220,253,1) 100%);
+position: relative;
+}
+.searchBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 15%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+  position: relative;
+  top: 50px;
+}
+.searchBox input{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(184, 178, 179);
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    
+}
+.searchBox input:hover{
+    border:2.8px solid #d59723;
+}
+.searchBox button{
+    height: 29px;
+    width: 70px;
+    border-radius: 8px;
+}
+
+.searchBox button:hover{
+    background-color: rgb(77, 172, 77)
+}
+
+
+
+/* movie results */
+
+.movie-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-gap: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+}
+.movie{
+    min-height: 350px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+.image{
+    height: 259px;
+    width: 180px;
+}
+.star-symbol{
+    height: 20px;
+    width: 20px;
+    margin-left: 7px;
+}
+.rating{
+    display: flex;
+    align-items: center;
+}
+.rating p{
+    margin-top:4px;
+    margin-left: 3px;
+}
+.imdb{
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-left: 50x;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.movieName{
+    min-height: 45px;
+}
+.movieName p{
+    font-size: 17px;
+    font-weight:bold ;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.movie-date {
+background-color:rgb(130, 154, 173);
+border-radius: 10px;
+text-align: center;
+margin: 0px 10px 0px;
+
+}
+.movie-click{
+    height: 353px;
+}

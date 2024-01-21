@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+            <form #filterForm="ngForm"  (ngSubmit)="filterMovie(filterForm.value)">
+                <div class="searchBox">
+            <div>
+                <label for="">From</label>
+            </div>
+            <div>
+                <input type="date" name="fromDate">
+            </div>
+            <div>
+                <label for="">To</label>
+            </div>
+            <div>
+                <input type="date" class="toDate">
+            </div>
+            <div>
+                <button>search</button>
+            </div>
+            </div>
+        </form>
+        
+
+        <div class="movie-container" >
+            <div class="movie" *ngFor="let movie of movies">
+                <!-- <div *ngIf="filteredMovies"> -->
+                    
+                    <button class="movie-click" (click)="playTrailer(movie)">
+                <div class="movie-image">
+                    <img [src]="movie.image" alt="" class="image">
+                </div>
+                <div class="rating">
+                    <img [src]="starImage" alt="" class="star-symbol">
+                    <p>{{movie.rating}}</p>
+                    <pre class="imdb">  IMBb</pre>
+                </div>
+                <div class="movieName">
+                    <p>{{movie.name}}</p>
+                </div>
+                <div class="movie-date">
+                    <p>{{movie.date}}</p>
+                </div>
+            </button>
+            <!-- </div>  -->
+        
+            </div>
+        
+            <!-- <div class="movie" *ngFor="let movie of filteredMovies">
+                <div class="movie-image">
+                    <img [src]="movie.image" alt="" class="image">
+                </div>
+                <div class="rating">
+                    <img [src]="starImage" alt="" class="star-symbol">
+                    <p>{{movie.rating}}</p>
+                    <pre class="imdb">  IMBb</pre>
+                </div>
+                <div class="movieName">
+                    <p>{{movie.name}}</p>
+                </div>
+                <div class="movie-date">
+                    <p>{{movie.date}}</p>
+                </div>
+            
+            </div> -->
+            
+        </div>
+    </div>
+</body>
+</html>
